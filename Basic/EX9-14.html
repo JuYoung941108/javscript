@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 명시적 타입 변환
+        // 1. 문자열 타입으로 변환
+        // (1) String 생성자 함수를 new 연산자 없이 호출하는 방법
+        // -> 콘솔은 내가 테스트하려고 넣은 것임
+        console.log(typeof String(1));
+        console.log(typeof String(NaN));
+        console.log(typeof String(Infinity));
+        console.log(typeof String(true));
+        console.log(typeof String(false));
+        // (2) Object.prototype.toString 메소드를 사용하는 방법
+        // -> 메소드라 toString 뒤에 괄호 붙여야 함
+        console.log((1).toString());
+        console.log((NaN).toString());
+        console.log((Infinity).toString());
+        console.log((true).toString());
+        console.log((false).toString());
+        // (3) 문자열 연결 연산자를 이용하는 방법
+        console.log(1+'');
+        // 이하 생략
+
+        // 2. 숫자 타입으로 변환
+        // (1) Number 생성자 함수를 new 연산자 없이 호출하는 방법
+        console.log(Number('0'));
+        console.log(Number('-1'));
+        console.log(Number('10.53'));
+        // (2) 불리언 타입 => 숫자 타입
+        console.log(Number(true)); // 1
+        console.log(Number(false)); // 0
+        // (3) parseInt, parseFloat 함수를 사용하는 방법(문자열만 가능)
+        console.log(parseInt('0'));
+        console.log(parseInt('-1'));
+        console.log(parseFloat('10.53'));
+        // 이하 생략
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 8-21
+        // outer라는 식별자가 붙은 레이블 for문을 생성한다.
+        outer: for (var i = 0; i < 3; i++) {
+            for (var j = 0; j < 3; j++) {
+                // i + j의 합이 3이면 outer라는 식별자가 붙은 레이블 for문을 탈출한다.(break outer;)
+                if (i + j === 3) break outer;
+                console.log(`inner [${i}, ${j}]`);
+            }
+        }
+
+        console.log('done!')
+
+        var text = '====================';
+        console.log(text);
+        // 8-22
+        var string = 'hello world!';
+        var search = 'w';
+        var index;
+        for (var i = 0; i < string.length; i++) {
+            // 1. 문자열의 개별 문자가 'w'라면
+            if (string[i] === search) {
+                // 변수 idex는 i를 참조한다.(string.length)
+                index = i;
+                break; // 2. 반복문을 탈출한다.
+            }
+        }
+        console.log(index);
+        // 참고로 String.prototype.indexOf 메소드를 사용해도 같은 동작을 한다.
+        console.log(string.indexOf(search));
+    </script>
+</body>
+
+</html>
